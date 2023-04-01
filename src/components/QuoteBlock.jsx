@@ -1,7 +1,12 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeProvider';
 import Card from '../common-components/Card';
-import { brandA, brandB } from '../utility/constant';
+import {
+  brandA,
+  brandB,
+  defaultBgColor,
+  defaultTextColor,
+} from '../utility/constant';
 
 const QuoteBlock = () => {
   const { theme } = useContext(ThemeContext);
@@ -11,8 +16,8 @@ const QuoteBlock = () => {
       componentBackgroundColor={theme === brandA ? brandA : brandB}
       underlineColor={theme === brandA ? brandA : brandB}
       brandButtonColor={theme === brandA ? brandA : brandB}
-      textBoxBackgroundColor={'FFFFFF'}
-      textColor={'282828'}
+      textBoxBackgroundColor={defaultBgColor}
+      textColor={defaultTextColor}
       hideUnderline={false}
     />
   );
